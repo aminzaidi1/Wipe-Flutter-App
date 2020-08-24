@@ -2,10 +2,6 @@ import 'package:Wipe/Components/BottomNavBar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-//imported pages
-
-import 'SignIn.dart';
-
 class SignUp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

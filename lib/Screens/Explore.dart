@@ -1,4 +1,5 @@
 import 'package:Wipe/Screens/LawnService.dart';
+import 'package:Wipe/Screens/Profile.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -444,7 +445,12 @@ class _CategoriesGridViewState extends State<CategoriesGridView> {
         ),
 //        Birthday Cake
         InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Profile()),
+            );
+          },
           child: Container(
             decoration: BoxDecoration(
                 image: DecorationImage(

@@ -1,3 +1,4 @@
+import 'package:Wipe/Screens/Calender.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -376,7 +377,12 @@ class _GiftCardState extends State<GiftCard> {
               height: height * .04,
               width: width * .34,
               child: FlatButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomePage()),
+                  );
+                },
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0),
                 ),
