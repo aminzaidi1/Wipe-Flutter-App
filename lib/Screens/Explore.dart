@@ -438,7 +438,7 @@ class _CategoriesGridViewState extends State<CategoriesGridView> {
                         fontSize: 24,
                         fontWeight: FontWeight.bold),
                   ),
-                )
+                ),
               ],
             ),
           ),

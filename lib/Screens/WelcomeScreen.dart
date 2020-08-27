@@ -14,102 +14,108 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
     final width = MediaQuery.of(context).size.width;
 
     return Scaffold(
-      body: Column(
-        children: <Widget>[
-          SizedBox(
-            height: height * .05,
-          ),
+      body: Container(
+        height: height * 1,
+        width: width * 1,
+        child: Column(
+          children: <Widget>[
+            SizedBox(
+              height: 15,
+            ),
 //          Service Image
-          Center(
-            child: Container(
+            Container(
               height: height * .55,
-              width: width * .85,
+              width: width * .88,
               decoration: BoxDecoration(
                 image: DecorationImage(
                     image: AssetImage('assets/IntroImages/Service.png'),
                     fit: BoxFit.fill),
               ),
             ),
-          ),
-          SizedBox(
-            height: height * .07,
-          ),
+            SizedBox(
+              height: 15,
+            ),
 //          Select a Service
-          Row(
-            children: <Widget>[
-              SizedBox(
-                width: width * .08,
-              ),
-              Text(
-                'Select a Service',
-                style: TextStyle(
-                  fontSize: 28,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'AvenirLTStd',
+            Row(
+              children: <Widget>[
+                SizedBox(
+                  width: width * .07,
                 ),
-              ),
-            ],
-          ),
+                Text(
+                  'Select a Service',
+                  style: TextStyle(
+                    fontSize: 22,
+                    fontWeight: FontWeight.bold,
+                    fontFamily: 'AvenirLTStd',
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
 //          Paragraph
-          Row(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.fromLTRB(35, 10, 0, 0),
-                child: Image.asset('assets/IntroImages/Paragraph.png'),
-              ),
-            ],
-          ),
-          SizedBox(
-            height: height * .03,
-          ),
-//          Dots and Buttons
-          Row(
-            children: <Widget>[
-              SizedBox(
-                width: width * .075,
-              ),
-              Image.asset('assets/IntroImages/dot1.png'),
-              SizedBox(
-                width: width * .5,
-              ),
-              Container(
-                height: 55,
-                width: 55,
-                decoration: BoxDecoration(
-                  color: Colors.green[300],
-                  borderRadius: BorderRadius.circular(50.0),
+            Padding(
+              padding: const EdgeInsets.fromLTRB(25, 10, 10, 0),
+              child: Image.asset('assets/IntroImages/Paragraph.png'),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Row(
+              children: <Widget>[
+                SizedBox(
+                  width: width * .065,
                 ),
-                child: Icon(
-                  Icons.arrow_back,
-                  color: Colors.white,
+//           Dots
+                Image.asset('assets/IntroImages/dot1.png'),
+                SizedBox(
+                  width: width * .45,
                 ),
-              ),
-              SizedBox(
-                width: width * .02,
-              ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => WelcomeScreen2()),
-                  );
-                },
-                child: Container(
-                  height: 55,
-                  width: 55,
-                  decoration: BoxDecoration(
-                    color: Colors.green[800],
-                    borderRadius: BorderRadius.circular(50.0),
-                  ),
-                  child: Icon(
-                    Icons.arrow_forward,
-                    color: Colors.white,
+//          Back Button
+                InkWell(
+                  onTap: () {},
+                  child: Container(
+                    height: 48,
+                    width: 48,
+                    decoration: BoxDecoration(
+                      color: Colors.green[300],
+                      borderRadius: BorderRadius.circular(50.0),
+                    ),
+                    child: Icon(
+                      Icons.arrow_back,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-              )
-            ],
-          ),
-        ],
+                SizedBox(
+                  width: width * .01,
+                ),
+//          Next Button
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => WelcomeScreen2()),
+                    );
+                  },
+                  child: Container(
+                    height: 48,
+                    width: 48,
+                    decoration: BoxDecoration(
+                      color: Colors.green[800],
+                      borderRadius: BorderRadius.circular(50.0),
+                    ),
+                    child: Icon(
+                      Icons.arrow_forward,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }

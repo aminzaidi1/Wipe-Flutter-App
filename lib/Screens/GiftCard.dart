@@ -1,6 +1,6 @@
-import 'package:Wipe/Screens/Calender.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:Wipe/Screens/Timeline.dart';
 
 class GiftCard extends StatefulWidget {
   @override
@@ -380,7 +380,7 @@ class _GiftCardState extends State<GiftCard> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => HomePage()),
+                    MaterialPageRoute(builder: (context) => Timeline()),
                   );
                 },
                 shape: RoundedRectangleBorder(
