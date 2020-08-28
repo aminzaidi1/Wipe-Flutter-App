@@ -1,5 +1,6 @@
 import 'package:Wipe/Screens/SignForm.dart';
 import 'package:flutter/material.dart';
+import 'ViewProfile.dart';
 
 //imported pages
 
@@ -11,232 +12,319 @@ class Profile extends StatefulWidget {
 }
 
 class _ProfileState extends State<Profile> {
-  bool state = true;
-
   @override
   Widget build(BuildContext context) {
     final height = MediaQuery.of(context).size.height;
     final width = MediaQuery.of(context).size.width;
+    final bold = FontWeight.bold;
+    final green = Colors.green;
+    final darkGreen = Colors.green[700];
+    final black = Colors.black;
+    final lightBlack = Colors.black54;
+    final avenir = 'AvenirLTStd';
+    final tick = 'assets/Landscape/Tick.png';
 
     return Scaffold(
-        body: Container(
-      /// background image
-      decoration: BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage('assets/IntroImages/BackgroundImage.png'),
-            fit: BoxFit.cover),
-      ),
-      child: Column(
+      body: ListView(
         children: <Widget>[
-          Column(
+//          Profile
+          Row(
             children: <Widget>[
               SizedBox(
-                height: height * .05,
+                width: width * .05,
               ),
-              Row(
+              Text(
+                'Profile',
+                style: TextStyle(
+                  fontWeight: bold,
+                  fontSize: 22,
+                  color: black,
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: height * .04,
+          ),
+//          Robert
+          Row(
+            children: <Widget>[
+              SizedBox(
+                width: width * .05,
+              ),
+              Column(
+                children: <Widget>[],
+              ),
+              Column(
                 children: <Widget>[
-                  SizedBox(
-                    width: width * .08,
+                  Row(
+                    children: <Widget>[
+                      Text(
+                        'Robert Anitei',
+                        style: TextStyle(
+                            fontFamily: avenir, fontSize: 14, fontWeight: bold),
+                      ),
+                    ],
                   ),
-                  Text(
-                    'Profile',
-                    style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                      fontFamily: 'AvenirLTStd',
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => ViewProfile()),
+                      );
+                    },
+                    child: Row(
+                      children: <Widget>[
+                        Icon(
+                          Icons.person,
+                          size: 12,
+                          color: lightBlack,
+                        ),
+                        SizedBox(
+                          width: 1,
+                        ),
+                        Text(
+                          'View my profile',
+                          style: TextStyle(
+                            color: green,
+                            fontSize: 10,
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ],
               ),
+            ],
+          ),
+          SizedBox(
+            height: height * .07,
+          ),
+//          Covid
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
               SizedBox(
-                height: height * .04,
+                width: width * .05,
               ),
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: width * .23,
-                  ),
-                  Image.asset('assets/IntroImages/Profile.png')
-                ],
-              ),
-              Column(
-                children: <Widget>[],
+              Text(
+                'COVID-19 Safety',
+                style: TextStyle(fontSize: 16, fontWeight: bold, color: black),
               )
             ],
           ),
           SizedBox(
-            width: width * .02,
+            height: height * .07,
           ),
-          SizedBox(
-            height: height * .02,
-          ),
-          Column(
+//          Account Settings
+          Row(
             children: <Widget>[
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: width * .08,
-                  ),
-                  Text(
-                    'Language',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                      fontFamily: 'AvenirLTStd',
-                    ),
-                  ),
-                  SizedBox(
-                    width: width * .415,
-                  ),
-                  Text(
-                    'English',
-                    style: TextStyle(
-                        fontFamily: 'AvenirLTStd',
-                        fontSize: 18,
-                        color: Colors.white),
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.arrow_forward_ios),
-                    iconSize: 18,
-                    color: Colors.white,
-                  ),
-                ],
+              SizedBox(
+                width: width * .05,
               ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
-                child: Divider(
-                  thickness: 1,
-                  color: Colors.white,
-                ),
+              Icon(
+                Icons.person_pin,
+                size: 17,
+                color: lightBlack,
               ),
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: width * .08,
-                  ),
-                  Text(
-                    'Currency',
-                    style: TextStyle(
-                        fontFamily: 'AvenirLTStd',
-                        fontSize: 18,
-                        color: Colors.white),
-                  ),
-                  SizedBox(
-                    width: width * .49,
-                  ),
-                  Text(
-                    'USD',
-                    style: TextStyle(
-                        fontSize: 18,
-                        fontFamily: 'AvenirLTStd',
-                        color: Colors.white),
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.arrow_forward_ios),
-                    iconSize: 18,
-                    color: Colors.white,
-                  ),
-                ],
+              SizedBox(
+                width: width * .03,
               ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
-                child: Divider(
-                  thickness: 1,
-                  color: Colors.white,
-                ),
-              ),
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: width * .08,
-                  ),
-                  Text(
-                    'Reminders',
-                    style: TextStyle(
-                        fontFamily: 'AvenirLTStd',
-                        fontSize: 18,
-                        color: Colors.white),
-                  ),
-                  SizedBox(
-                    width: width * .5,
-                  ),
-                  Switch(
-                    value: state,
-                    onChanged: (bool s) {
-                      setState(() {
-                        state = s;
-                        print(state);
-                      });
-                    },
-                    activeColor: Colors.white,
-                  )
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
-                child: Divider(
-                  thickness: 1,
-                  color: Colors.white,
-                ),
-              ),
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: width * .08,
-                  ),
-                  Text(
-                    'Privacy Policy',
-                    style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.white,
-                      fontFamily: 'AvenirLTStd',
-                    ),
-                  ),
-                  SizedBox(
-                    width: width * .48,
-                  ),
-                  IconButton(
-                    onPressed: () {},
-                    icon: Icon(Icons.arrow_forward_ios),
-                    iconSize: 18,
-                    color: Colors.white,
-                  ),
-                ],
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(32, 0, 32, 0),
-                child: Divider(
-                  thickness: 1,
-                  color: Colors.white,
-                ),
+              Text(
+                'Account settings/ Personal information',
+                style: TextStyle(fontSize: 13, fontFamily: avenir),
               ),
             ],
           ),
           SizedBox(
-            height: height * 0.05,
+            height: height * .02,
           ),
-          InkWell(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => SignForm()),
-              );
-            },
-            child: Container(
-              height: height * .07,
-              width: width * .7,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage('assets/IntroImages/SignInButton.png'),
-                ),
+//          Earn Money
+          Row(
+            children: <Widget>[
+              SizedBox(
+                width: width * .05,
               ),
-            ),
+              Icon(
+                Icons.monetization_on,
+                size: 17,
+                color: lightBlack,
+              ),
+              SizedBox(
+                width: width * .03,
+              ),
+              Text(
+                'Earn money with WIPE',
+                style: TextStyle(fontSize: 13, fontFamily: avenir),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: height * .02,
+          ),
+//          Saved
+          Row(
+            children: <Widget>[
+              SizedBox(
+                width: width * .05,
+              ),
+              Icon(
+                Icons.save_alt,
+                size: 17,
+                color: lightBlack,
+              ),
+              SizedBox(
+                width: width * .03,
+              ),
+              Text(
+                'Saved',
+                style: TextStyle(fontSize: 13, fontFamily: avenir),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: height * .02,
+          ),
+//          Payment
+          Row(
+            children: <Widget>[
+              SizedBox(
+                width: width * .05,
+              ),
+              Icon(
+                Icons.payment,
+                size: 17,
+                color: lightBlack,
+              ),
+              SizedBox(
+                width: width * .03,
+              ),
+              Text(
+                'Payment',
+                style: TextStyle(fontSize: 13, fontFamily: avenir),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: height * .02,
+          ),
+//          Notifications
+          Row(
+            children: <Widget>[
+              SizedBox(
+                width: width * .05,
+              ),
+              Icon(
+                Icons.notifications,
+                size: 17,
+                color: lightBlack,
+              ),
+              SizedBox(
+                width: width * .03,
+              ),
+              Text(
+                'Notifications',
+                style: TextStyle(fontSize: 13, fontFamily: avenir),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: height * .02,
+          ),
+//          Gift Cards
+          Row(
+            children: <Widget>[
+              SizedBox(
+                width: width * .05,
+              ),
+              Icon(
+                Icons.card_giftcard,
+                size: 17,
+                color: lightBlack,
+              ),
+              SizedBox(
+                width: width * .03,
+              ),
+              Text(
+                'Gift Cards',
+                style: TextStyle(fontSize: 13, fontFamily: avenir),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: height * .08,
+          ),
+//          Support
+          Row(
+            children: <Widget>[
+              SizedBox(
+                width: width * .05,
+              ),
+              Icon(
+                Icons.camera_alt,
+                size: 17,
+                color: lightBlack,
+              ),
+              SizedBox(
+                width: width * .03,
+              ),
+              Text(
+                'Support',
+                style: TextStyle(fontSize: 13, fontFamily: avenir),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: height * .02,
+          ),
+//          Help
+          Row(
+            children: <Widget>[
+              SizedBox(
+                width: width * .05,
+              ),
+              Icon(
+                Icons.help_outline,
+                size: 17,
+                color: lightBlack,
+              ),
+              SizedBox(
+                width: width * .03,
+              ),
+              Text(
+                'Help',
+                style: TextStyle(fontSize: 13, fontFamily: avenir),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: height * .02,
+          ),
+//          Log Out
+          Row(
+            children: <Widget>[
+              SizedBox(
+                width: width * .05,
+              ),
+              Icon(
+                Icons.power_settings_new,
+                size: 17,
+                color: lightBlack,
+              ),
+              SizedBox(
+                width: width * .03,
+              ),
+              Text(
+                'Log Out',
+                style: TextStyle(fontSize: 13, fontFamily: avenir),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: height * .02,
           ),
         ],
       ),
-    ));
+    );
   }
 }
