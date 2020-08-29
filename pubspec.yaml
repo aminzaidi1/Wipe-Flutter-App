@@ -140,6 +140,13 @@ flutter:
     - assets/Landscape/Venue.png
     - assets/Landscape/LawnMaintenance.png
     - assets/Landscape/AdamsLargeText.png
+    - assets/new/corona.png
+    - assets/new/mike.png
+    - assets/new/robertoval.png
+    - assets/new/tickedshield.png
+    - assets/new/heart.png
+    - assets/new/null.png
+    - assets/new/robertsquare.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

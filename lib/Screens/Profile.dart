@@ -53,7 +53,10 @@ class _ProfileState extends State<Profile> {
                 width: width * .05,
               ),
               Column(
-                children: <Widget>[],
+                children: <Widget>[Image.asset('assets/new/robertoval.png')],
+              ),
+              SizedBox(
+                width: width * .02,
               ),
               Column(
                 children: <Widget>[
@@ -98,23 +101,36 @@ class _ProfileState extends State<Profile> {
             ],
           ),
           SizedBox(
-            height: height * .07,
+            height: height * .04,
           ),
 //          Covid
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              SizedBox(
-                width: width * .05,
-              ),
-              Text(
-                'COVID-19 Safety',
-                style: TextStyle(fontSize: 16, fontWeight: bold, color: black),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(5),
+                  color: Colors.grey[200],
+                ),
+                width: width * .85,
+                height: height * .05,
+                child: Row(
+                  children: <Widget>[
+                    SizedBox(
+                      width: width * .02,
+                    ),
+                    Image.asset('assets/new/tickedshield.png'),
+                    SizedBox(
+                      width: width * .12,
+                    ),
+                    Image.asset('assets/new/corona.png')
+                  ],
+                ),
               )
             ],
           ),
           SizedBox(
-            height: height * .07,
+            height: height * .04,
           ),
 //          Account Settings
           Row(
@@ -168,13 +184,9 @@ class _ProfileState extends State<Profile> {
               SizedBox(
                 width: width * .05,
               ),
-              Icon(
-                Icons.save_alt,
-                size: 17,
-                color: lightBlack,
-              ),
+              Image.asset('assets/new/heart.png'),
               SizedBox(
-                width: width * .03,
+                width: width * .028,
               ),
               Text(
                 'Saved',

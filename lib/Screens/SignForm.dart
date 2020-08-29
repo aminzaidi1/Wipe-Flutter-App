@@ -1,9 +1,7 @@
 import 'package:Wipe/Screens/CreateAccount.dart';
-import 'package:Wipe/Screens/SignIn.dart';
 import 'package:Wipe/Screens/SignUp.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:Wipe/Components/BottomNavBar.dart';
 
 class SignForm extends StatefulWidget {
   @override

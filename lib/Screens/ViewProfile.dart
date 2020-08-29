@@ -94,8 +94,7 @@ class _ViewProfileState extends State<ViewProfile> {
               Column(
                 children: <Widget>[
                   CircleAvatar(
-                    backgroundImage:
-                        AssetImage('assets/IntroImages/Profile.png'),
+                    backgroundImage: AssetImage('assets/new/robertoval.png'),
                     maxRadius: 35,
                   ),
                   SizedBox(
@@ -114,6 +113,10 @@ class _ViewProfileState extends State<ViewProfile> {
               SizedBox(
                 width: width * .055,
               ),
+              Image.asset('assets/new/tickedshield.png'),
+              SizedBox(
+                width: width * .02,
+              ),
               Text(
                 'Identity verified',
                 style: TextStyle(fontFamily: 'AvenirLTStd', fontSize: 14),
@@ -121,13 +124,17 @@ class _ViewProfileState extends State<ViewProfile> {
             ],
           ),
           SizedBox(
-            height: height * .0,
+            height: height * .01,
           ),
 //          Reveiws
           Row(
             children: <Widget>[
               SizedBox(
                 width: width * .055,
+              ),
+              Image.asset('assets/new/null.png'),
+              SizedBox(
+                width: width * .01,
               ),
               Text(
                 'Reviews',
@@ -156,236 +163,233 @@ class _ViewProfileState extends State<ViewProfile> {
           SizedBox(
             height: height * .02,
           ),
-          Column(
+          Row(
             children: <Widget>[
-//              Overall
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: width * .055,
-                  ),
-                  Text(
-                    'Overall Customer Experience. Individuals have one',
-                    maxLines: 1,
-                    style: TextStyle(color: Colors.black, fontSize: 11.5),
-                  ),
-                ],
-              ),
               SizedBox(
-                height: height * .01,
+                width: width * .055,
               ),
+              Text(
+                'Overall Customer Experience. Individuals have one',
+                maxLines: 1,
+                style: TextStyle(color: Colors.black, fontSize: 11.5),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: height * .01,
+          ),
 //              main
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: width * .055,
-                  ),
-                  Text(
-                    'main purpose for contacting a customer service center',
-                    maxLines: 1,
-                    style: TextStyle(color: Colors.black, fontSize: 11.5),
-                  ),
-                ],
-              ),
+          Row(
+            children: <Widget>[
               SizedBox(
-                height: height * .01,
+                width: width * .055,
               ),
+              Text(
+                'main purpose for contacting a customer service center',
+                maxLines: 1,
+                style: TextStyle(color: Colors.black, fontSize: 11.5),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: height * .01,
+          ),
 //              to resolve
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: width * .055,
-                  ),
-                  Text(
-                    'to resolve an issue.',
-                    maxLines: 1,
-                    style: TextStyle(color: Colors.black, fontSize: 11.5),
-                  ),
-                ],
-              ),
+          Row(
+            children: <Widget>[
               SizedBox(
-                height: height * .035,
+                width: width * .055,
               ),
+              Text(
+                'to resolve an issue.',
+                maxLines: 1,
+                style: TextStyle(color: Colors.black, fontSize: 11.5),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: height * .035,
+          ),
 //              Georgins, London
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: width * .055,
-                  ),
-                  Text(
-                    'Georgins, London',
-                    style: TextStyle(color: lightBlack, fontSize: 12),
-                  ),
-                ],
+          Row(
+            children: <Widget>[
+              SizedBox(
+                width: width * .055,
               ),
+              Text(
+                'Georgins, London',
+                style: TextStyle(color: lightBlack, fontSize: 12),
+              ),
+            ],
+          ),
 //              English, Spanish
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: width * .055,
-                  ),
-                  Text(
-                    'English, Spanish',
-                    style: TextStyle(color: lightBlack, fontSize: 12),
-                  ),
-                ],
-              ),
+          Row(
+            children: <Widget>[
               SizedBox(
-                height: height * .02,
+                width: width * .055,
               ),
+              Text(
+                'English, Spanish',
+                style: TextStyle(color: lightBlack, fontSize: 12),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: height * .02,
+          ),
 //              Robert Confirmed
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: width * .055,
-                  ),
-                  Text(
-                    'Robert',
-                    style:
-                        TextStyle(fontWeight: bold, color: green, fontSize: 14),
-                  ),
-                  SizedBox(
-                    width: width * .02,
-                  ),
-                  Text(
-                    'Confirmed',
-                    style:
-                        TextStyle(fontWeight: bold, color: black, fontSize: 14),
-                  ),
-                ],
+          Row(
+            children: <Widget>[
+              SizedBox(
+                width: width * .055,
+              ),
+              Text(
+                'Robert',
+                style: TextStyle(fontWeight: bold, color: green, fontSize: 14),
               ),
               SizedBox(
-                height: height * .02,
+                width: width * .02,
               ),
+              Text(
+                'Confirmed',
+                style: TextStyle(fontWeight: bold, color: black, fontSize: 14),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: height * .02,
+          ),
 //              Tick 1
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: width * .055,
-                  ),
-                  Container(
-                      height: 13,
-                      width: 13,
-                      decoration: BoxDecoration(
-                          color: darkGreen,
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Image.asset(tick)),
-                  SizedBox(
-                    width: width * .05,
-                  ),
-                  Text(
-                    'Identity',
-                    style: TextStyle(fontFamily: avenir, fontSize: 10),
-                  )
-                ],
-              ),
+          Row(
+            children: <Widget>[
               SizedBox(
-                height: height * .02,
+                width: width * .055,
               ),
+              Container(
+                  height: 13,
+                  width: 13,
+                  decoration: BoxDecoration(
+                      color: darkGreen,
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Image.asset(tick)),
+              SizedBox(
+                width: width * .05,
+              ),
+              Text(
+                'Identity',
+                style: TextStyle(fontFamily: avenir, fontSize: 10),
+              )
+            ],
+          ),
+          SizedBox(
+            height: height * .02,
+          ),
 //              Tick 2
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: width * .055,
-                  ),
-                  Container(
-                      height: 13,
-                      width: 13,
-                      decoration: BoxDecoration(
-                          color: darkGreen,
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Image.asset(tick)),
-                  SizedBox(
-                    width: width * .05,
-                  ),
-                  Text(
-                    'Cell number',
-                    style: TextStyle(fontFamily: avenir, fontSize: 10),
-                  )
-                ],
-              ),
+          Row(
+            children: <Widget>[
               SizedBox(
-                height: height * .02,
+                width: width * .055,
               ),
+              Container(
+                  height: 13,
+                  width: 13,
+                  decoration: BoxDecoration(
+                      color: darkGreen,
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Image.asset(tick)),
+              SizedBox(
+                width: width * .05,
+              ),
+              Text(
+                'Cell number',
+                style: TextStyle(fontFamily: avenir, fontSize: 10),
+              )
+            ],
+          ),
+          SizedBox(
+            height: height * .02,
+          ),
 //              Tick 3
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: width * .055,
-                  ),
-                  Container(
-                      height: 13,
-                      width: 13,
-                      decoration: BoxDecoration(
-                          color: darkGreen,
-                          borderRadius: BorderRadius.circular(20)),
-                      child: Image.asset(tick)),
-                  SizedBox(
-                    width: width * .05,
-                  ),
-                  Text(
-                    'Email Address',
-                    style: TextStyle(fontFamily: avenir, fontSize: 10),
-                  ),
-                ],
-              ),
+          Row(
+            children: <Widget>[
               SizedBox(
-                height: height * .01,
+                width: width * .055,
               ),
+              Container(
+                  height: 13,
+                  width: 13,
+                  decoration: BoxDecoration(
+                      color: darkGreen,
+                      borderRadius: BorderRadius.circular(20)),
+                  child: Image.asset(tick)),
+              SizedBox(
+                width: width * .05,
+              ),
+              Text(
+                'Email Address',
+                style: TextStyle(fontFamily: avenir, fontSize: 10),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: height * .01,
+          ),
 //              Divider
-              Center(
-                child: SizedBox(
-                  width: width * .84,
-                  child: Divider(
-                    thickness: 1,
-                  ),
-                ),
+          Center(
+            child: SizedBox(
+              width: width * .84,
+              child: Divider(
+                thickness: 1,
               ),
-              SizedBox(
-                height: height * .01,
-              ),
+            ),
+          ),
+          SizedBox(
+            height: height * .01,
+          ),
 //              Reviews
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: width * .055,
-                  ),
-                  Text(
-                    'Reviews',
-                    style: TextStyle(fontWeight: bold, fontSize: 14),
-                  ),
-                ],
-              ),
+          Row(
+            children: <Widget>[
               SizedBox(
-                height: height * .02,
+                width: width * .055,
               ),
+              Text(
+                'Reviews',
+                style: TextStyle(fontWeight: bold, fontSize: 14),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: height * .02,
+          ),
 //              Mike
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: width * .055,
-                  ),
-                  Text(
-                    'Mike',
-                    style: TextStyle(fontFamily: avenir),
-                  ),
-                ],
-              ),
+          Row(
+            children: <Widget>[
               SizedBox(
-                height: height * .01,
+                width: width * .055,
               ),
+              Image.asset('assets/new/mike.png'),
+              SizedBox(
+                width: width * .01,
+              ),
+              Text(
+                'Mike',
+                style: TextStyle(fontFamily: avenir),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: height * .01,
+          ),
 //              Client
-              Row(
-                children: <Widget>[
-                  SizedBox(
-                    width: width * .055,
-                  ),
-                  Text(
-                    'Client very responsive thanks for work',
-                    style: TextStyle(fontSize: 11),
-                  )
-                ],
+          Row(
+            children: <Widget>[
+              SizedBox(
+                width: width * .055,
               ),
+              Text(
+                'Client very responsive thanks for work',
+                style: TextStyle(fontSize: 11),
+              )
             ],
           ),
         ],
