@@ -1,6 +1,6 @@
 # Wipe
 
-A new Flutter project.
+A new Flutter project with firebase integration.
 
 ## Getting Started
 
